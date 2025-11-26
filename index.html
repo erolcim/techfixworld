@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix World - Suport Tehnic</title>
+    <!-- Load Tailwind CSS for modern styling --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom styling for a smooth, centered container */
+        .container-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        /* Ensure the main logo container has the correct font/color based on the uploaded image */
+        .logo-text {
+            color: #002244; /* Dark blue color */
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        /* Stil pentru fundalul avatarului (să arate ca o imagine) */
+        .avatar-style {
+            background-color: #004B8D; /* Culoare de fundal similară imaginii originale */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem; /* Mărește emoji-ul */
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start p-6">
+
+    <div class="w-full max-w-lg mt-8 bg-white p-8 rounded-xl container-shadow border border-gray-100">
+        
+        <!-- Antet / Header - Păstrează doar Avatarul și Titlul H2 -->
+        <div class="flex flex-col items-center mb-6">
+            
+            <!-- Imagine Avatar / Avatar Image (Pictogramă Stabilită) --><div class="mb-4 flex justify-center">
+                <div 
+                    class="w-36 h-36 rounded-full border-4 border-blue-200 shadow-md avatar-style"
+                    alt="TechFix World Avatar" 
+                >
+                    👨‍🔧
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-blue-800 text-center">TechFix World</h2>
+            <h3 class="text-xl font-semibold text-gray-600 text-center mt-1">Suport Tehnic / Tech Support</h3>
+        </div>
+        
+        <p class="text-gray-600 text-center mb-6">
+            Ai o problemă cu PC-ul sau laptopul? Trimite formularul și te contactăm **în maximum 1 oră**!
+            <br>
+            Having issues with your PC or laptop? Fill the form and we’ll contact you **within 1 hour**!
+        </p>
+
+        <!-- 
+            FORMULAR DE CONTACT
+            ACȚIUNE: Formspree (Hash: xvgjpnnk)
+            DESTINATAR VIZAT: lore.techfixworld@gmail.com
+        --><form 
+            action="https://formspree.io/f/xvgjpnnk" 
+            method="POST" 
+            class="space-y-4 border-t pt-4"
+        >
+            <!-- Nume / Name --><div>
+                <label for="nume_utilizator" class="block text-sm font-medium text-gray-700">Nume / Name</label>
+                <input 
+                    type="text" 
+                    name="Nume" 
+                    id="nume_utilizator" 
+                    required 
+                    placeholder="Ion Popescu"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                >
+            </div>
+
+            <!-- Email (Folosit ca adresă de răspuns) --><div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email / Email Address</label>
+                <input 
+                    type="email" 
+                    name="_replyto" 
+                    id="email" 
+                    required 
+                    placeholder="adresa.ta@exemplu.ro"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                >
+            </div>
+            
+            <!-- Subiect Email Ascuns (Pentru căutare ușoară în Gmail) --><input type="hidden" name="_subject" value="⭐ [TechFix] Cerere Nouă de Suport!">
+
+
+            <!-- Problemă / Issue --><div>
+                <label for="issue" class="block text-sm font-medium text-gray-700">Problemă / Issue</label>
+                <textarea 
+                    name="Problema" 
+                    id="issue" 
+                    rows="4" 
+                    required 
+                    placeholder="Descrie pe scurt problema tehnică..."
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 resize-none"
+                ></textarea>
+            </div>
+
+            <!-- Buton Trimite / Submit Button --><div>
+                <button 
+                    type="submit" 
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 transform hover:scale-[1.01]"
+                >
+                    Trimite Comanda / Submit Request
+                </button>
+            </div>
+        </form>
+
+        <!-- Secțiune Suport Remote / Remote Support Section --><div class="mt-8 pt-4 border-t text-center">
+            <p class="font-semibold text-gray-800 mb-3">Suport Remote / Remote Support:</p>
+            <a 
+                href="https://www.teamviewer.com/en/download/windows/" 
+                target="_blank" 
+                class="inline-block w-full"
+            >
+                <button 
+                    class="w-full py-3 px-4 border border-transparent rounded-lg shadow-md text-sm font-semibold text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 transition duration-150"
+                >
+                    Descarcă TeamViewer / Download TeamViewer
+                </button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
